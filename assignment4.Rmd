@@ -1,0 +1,24 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+
+sequence <- c()
+for (i in 1:32) {
+  temp <- sample(seq(32), 32, replace = F)
+  sequence <- append(sequence, temp)
+}
+
+
+
+```
+
+
+
+```{r}
+
+```
+
