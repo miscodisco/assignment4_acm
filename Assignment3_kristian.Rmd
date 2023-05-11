@@ -1,0 +1,46 @@
+---
+title: "Assignment4_kristian"
+author: "Kristian Severin"
+date: "2023-05-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+pacman::p_load(
+  tidyverse,
+  brms,
+  cmdstanr,
+  patchwork
+)
+```
+
+```{r}
+# defining stimuli
+eyes <- c(0,1)
+spots <- c(0,1)
+color <- c(0,1)
+arms <- c(0,1)
+legs <- c(0,1)
+
+# making stimuli tibble
+stimuli <- expand_grid(eyes, spots, color, arms, legs)
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
