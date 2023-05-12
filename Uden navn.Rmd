@@ -132,9 +132,6 @@ simulate_responses <- function(agent, w, c) {
     else if (w == "skewed") {
          weight <- c(0.5, 0.5, 0, 0, 0)
      }
-    else if (w == "skewed2") {
-         weight <- c(0.1, 0.1, 0.1, 0.6, 0.1)
-     }
 
     # simulate responses
     responses <- gcm(
@@ -236,8 +233,6 @@ samples_gcm$summary()
 
 ```{r}
 draws_df <- as_draws_df(samples_gcm$draws())
-
-#write_csv(draws_df, "initial_drawsdf.csv")
 
 p1 <- ggplot(draws_df, aes(.iteration, c, group = .chain, color = .chain)) +
   geom_line(alpha = 0.5) +
@@ -345,9 +340,8 @@ samples_gcm <- mod_GCM$sample(
   refresh = 500
 )
 
-
-#obs2 = as.matrix(d[, c("col1", "col2", "col3", "col4", "col5")])
 ```
+
 ```{r}
 draws_df <- as_draws_df(samples_gcm$draws())
 
