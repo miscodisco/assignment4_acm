@@ -342,6 +342,7 @@ samples_gcm <- mod_GCM$sample(
 
 ```
 
+
 ```{r}
 draws_df <- as_draws_df(samples_gcm$draws())
 
